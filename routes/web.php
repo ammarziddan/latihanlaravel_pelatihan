@@ -29,3 +29,11 @@ Route::get('/login', function () {
 Route::get('/fakultas/{namafakultas}', 'FakultasController@index');
 
 Route::get('/sarjana/{alas}', 'SarjanaController@index');
+
+
+Route::get('/mahasiswa', 'MahasiswaController@index');
+Route::get('/mahasiswa/create', 'MahasiswaController@create')->name('mahasiswa.create');
+Route::post('/mahasiswa/store', 'MahasiswaController@store')->name('mahasiswa.store');
+Route::get('/mahasiswa/edit/{id}', 'MahasiswaController@edit')->name('mahasiswa.edit');
+Route::post('/mahasiswa/update/{id}', 'MahasiswaController@update')->name('mahasiswa.update');
+Route::get('/mahasiswa/destroy/{id}', 'MahasiswaController@destroy')->name('mahasiswa.destroy');
